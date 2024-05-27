@@ -25,12 +25,11 @@ cd ${MT_CORE_DIR}
 while true;
 do
 
-#if MT_PROFILE_DIR not found, then we need to create it
-if [ ! -d ${MT_PROFILE_DIR} ]; then
-    echo "Skip running MTCore, since profile directory not found!"
+#if MT_DFAULT_PROFILE_CONFIG file not found, then we can not run MTCore
+if [ ! -f ${MT_DEFAULT_PROFILE_CONFIG} ]; then
+    echo "Default profile config file not found, skipping MTCore start!"
     break
 fi
-
 
 ./MTCore  ${MT_CORE_ARGS} &
 declare -i corePid=$!
