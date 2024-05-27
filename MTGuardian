@@ -24,6 +24,14 @@ cd ${MT_CORE_DIR}
 
 while true;
 do
+
+#if MT_PROFILE_DIR not found, then we need to create it
+if [ ! -d ${MT_PROFILE_DIR} ]; then
+    echo "Skip running MTCore, since profile directory not found!"
+    break
+fi
+
+
 ./MTCore  ${MT_CORE_ARGS} &
 declare -i corePid=$!
 SendTelegramMessage "Notice: MTCore on [${MT_CORE_SERVER_NAME}] succesfly started at `date`!"

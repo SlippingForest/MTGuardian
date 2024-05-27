@@ -3,6 +3,7 @@
 # MTCore section
 
 MT_CORE_DIR=/full/path/to/mt/
+MT_PROFILE_DIR=/full/path/to/mt/profiles/
 MT_CORE_ARGS='--no-update '
 
 # here you can write ANYTHING what you want to be known for your server name
