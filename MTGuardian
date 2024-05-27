@@ -26,7 +26,7 @@ while true;
 do
 
 #if MT_DFAULT_PROFILE_CONFIG file not found, then we can not run MTCore
-if [ ! -f ${MT_DEFAULT_PROFILE_CONFIG} ]; then
+if [ ! -f $MT_DEFAULT_PROFILE_CONFIG ]; then
     echo "Default profile config file not found, skipping MTCore start!"
     break
 fi
